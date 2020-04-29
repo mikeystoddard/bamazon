@@ -37,17 +37,7 @@ function userInput() {
     inquirer.prompt([{
                 type: "input",
                 name: "itemId",
-                message: "What is the ID of the item you would like to purchase? [press 'Q' to quit]",
-                validate: function(input){
-                    console.log(input)
-                    if (input.toLowerCase() === 'q') {
-                        console.log("Thank you for shopping at Bamazon!")
-                        //Close Connection
-                        connection.end();
-                        //exits the app
-                        process.exit(0);
-                    }
-                }
+                message: "What is the ID of the item you would like to purchase?",
             },
             {
                 type: "input",
